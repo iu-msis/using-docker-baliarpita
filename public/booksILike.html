@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Books I Like</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- JQuery script CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap script CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+</head>
+
+<body class="booksPage">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand caps" href="index.html">Claire Stephens</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav caps">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutMe.html">About me</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="booksILike.html">Books I like</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <!-- Table should have at the following columns (title, author(s), 
+        year published, publisher, page count, MSRP) and four rows. -->
+    <main>
+        <div class="container topMargin border-bottom">
+            <br><br>
+            <h1 class="headingBooks">
+                Here are some of the books I like...
+            </h1>
+            <br>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr class="center">
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Author(s)</th>
+                        <th scope="col">Year published</th>
+                        <th scope="col">Publisher</th>
+                        <th scope="col">Page count</th>
+                        <th scope="col">MSRP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="center">
+                        <th scope="row">1</th>
+                        <td class="bookTitle">Frankenstein</td>
+                        <td>Mary Shelley</td>
+                        <td>1818</td>
+                        <td>Penguin Classics</td>
+                        <td>370</td>
+                        <td>$ 8.00</td>
+                    </tr>
+                    <tr class="center">
+                        <th scope="row">2</th>
+                        <td class="bookTitle"> I, Robot</td>
+                        <td>Isaac Asimov</td>
+                        <td>1950</td>
+                        <td>Spectra</td>
+                        <td>256</td>
+                        <td>$ 12.53</td>
+                    </tr>
+                    <tr class="center">
+                        <th scope="row">3</th>
+                        <td class="bookTitle">The Time Machine</td>
+                        <td>H.G. Wells</td>
+                        <td>1895</td>
+                        <td>Penguin Classics</td>
+                        <td>560</td>
+                        <td>$ 6.86</td>
+                    </tr>
+                    <tr class="center">
+                        <th scope="row">4</th>
+                        <td class="bookTitle">The Martian Chronicles</td>
+                        <td>Ray Bradbury</td>
+                        <td>1950</td>
+                        <td> Simon & Schuster</td>
+                        <td>256</td>
+                        <td>$ 7.59</td>
+                    </tr>
+                    <tr class="center">
+                        <th scope="row">5</th>
+                        <td class="bookTitle">I Am Legend</td>
+                        <td>Richard Matheson</td>
+                        <td>1954</td>
+                        <td>Tor Books</td>
+                        <td>320</td>
+                        <td>$ 8.09</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+        <br>
+        <div class="container topMargin formCardMain">
+            <br><br>
+            <h1 class="headingBooks">
+                Would you like to add to the list above?
+            </h1><br>
+            <div class="container formCard">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputTitle">Title</label>
+                            <input type="text" class="form-control" id="inputTitle" placeholder="Book Title">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputAuthor">Author(s)</label>
+                            <input type="text" class="form-control" id="inputAuthor" placeholder="Author(s)">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputYearPublished">Year published</label>
+                            <input type="number" class="form-control" id="inputYearPublished"
+                                placeholder="Year published ex. 1818">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPublisher">Publisher</label>
+                            <input type="text" class="form-control" id="inputPublisher" placeholder="Publisher">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputPageCount">Page Count</label>
+                            <input type="number" class="form-control" id="inputPageCount" placeholder="Page Count">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputMSRP">MSRP</label>
+                            <input type="number" class="form-control" id="inputMSRP" placeholder="MSRP">
+                        </div>
+                    </div>
+                    <button type="submit" class="cta cta-2 w-button">Add book</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <br><br>
+        <p>Welcome to my page</p>
+        <p>Copyright &copy; 2019 All Rights Reserved by
+            <em>Arpita Bali</em>
+        </p>
+    </footer>
+
+</body>
+
+</html>
