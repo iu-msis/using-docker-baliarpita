@@ -51,10 +51,10 @@
                 Here are some of the books I like...
             </h1>
             <br>
-            <table class="table">
+            <table id="booksTable" class="table">
                 <thead class="thead-dark">
                     <tr class="center">
-                        <th scope="col">#</th>
+                        <th data-sort-default scope="col">#</th>
                         <th scope="col">Title</th>
                         <th scope="col">Author(s)</th>
                         <th scope="col">Year published</th>
@@ -167,6 +167,13 @@
             <em>Arpita Bali</em>
         </p>
     </footer>
+
+    <!-- TableSort script -->
+    <!-- Tablesort plugin from: -->
+    <script src="js/tablesort.min.js"></script>
+    <script>
+        new Tablesort(document.getElementById('booksTable'));
+    </script>
 
 </body>
 
