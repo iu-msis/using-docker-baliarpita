@@ -49,39 +49,49 @@
          email address (clickable link!), and a profile picture of the user -->
     <main>
         <div class="container mainContainer">
-            <div class="row center customCard">
+            <div class="row center customCard" id="userDetails">
                 <div class="col col-lg-12 col-md-12 border-bottom">
                     <div class="thumbnail">
-                        <a href="https://randomuser.me/api/portraits/women/86.jpg" target="_blank">
-                            <img src="https://randomuser.me/api/portraits/women/86.jpg" alt="Claire Stephens"
-                                class="img-thumbnail" title="Random woman 86 by randomuser.me">
-                            <p class="citation"><a href="https://randomuser.me/api/portraits/women/86.jpg" target="_blank">"Random woman
-                                    86"</a> by randomuser.me</p>
+                        <a v-bind:href="newUser.picture.large" target="_blank">
+                            <!-- <img src="https://randomuser.me/api/portraits/women/86.jpg" alt="Claire Stephens"
+                                class="img-thumbnail" title="Random woman 86 by randomuser.me"> -->
+                            <img v-bind:src="newUser.picture.large" v-bind:alt="newUser.picture.large"
+                                class="img-thumbnail" v-bind:title="newUser.picture.large">
+                            <p class="citation"><a v-bind:href="newUser.picture.large" target="_blank">Sourced from
+                                </a>randomuser.me</p>
                         </a>
                     </div>
                     <p class="headerName caps">
                         <b>
-                            Claire Stephens
+                            <!-- Claire Stephens -->
+                            {{newUser.name.first}} {{newUser.name.last}}
                         </b>
                     </p>
                 </div>
                 <div class="col col-lg-2 col-md-2 topMargin">
                     <i class="fas fa-globe-asia"></i>
-                    <strong>Country:</strong> USA
+                    <!-- <strong>Country:</strong> USA -->
+                    <strong>Country:</strong> {{newUser.nat}}
                 </div>
                 <div class="col col-lg-3 col-md-3 topMargin">
                     <i class="fas fa-birthday-cake"></i>&nbsp;
-                    <strong>Birthdate:</strong> 1/5/1971
+                    <!-- <strong>Birthdate:</strong> 1/5/1971 -->
+                    <strong>Birthdate:</strong> {{newUser.dob.date}}
                 </div>
                 <div class="col col-lg-2 col-md-3 topMargin">
                     <i class="fas fa-baby-carriage"></i>
-                    <strong>Age:</strong> 48 years
+                    <!-- <strong>Age:</strong> 48 years -->
+                    <strong>Age:</strong> {{newUser.dob.age}}
                 </div>
                 <div class="col col-lg-5 col-md-5 topMargin">
                     <i class="far fa-envelope"></i>&nbsp;
-                    <strong>Email:</strong> <a id="email"
+                    <!-- <strong>Email:</strong> <a id="email"
                         href="mailto:claire.stephens68@example.com?Subject=Hello%20Claire">
                         claire.stephens68@example.com
+                    </a> -->
+                    <strong>Email:</strong> <a id="email"
+                        v-bind:href="'mailto:' + newUser.email + '?Subject=Hello'">
+                        {{newUser.email}}
                     </a>
                 </div>
             </div>
@@ -96,6 +106,9 @@
             <em>Arpita Bali</em>
         </p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/randomUser.js"></script>
 
 </body>
 
